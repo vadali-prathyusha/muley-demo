@@ -1,0 +1,6 @@
+%dw 2.0
+output application/json
+---
+payload reduce ((item, index) -> (
+    if(item > index) item  else index
+))
